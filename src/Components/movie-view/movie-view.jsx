@@ -1,3 +1,6 @@
+import './movie-view.scss';
+import Button from 'react-bootstrap/Button';
+
 export const MovieView = ({movieData, onBackClick}) => {
     return (
         <div>
@@ -9,7 +12,7 @@ export const MovieView = ({movieData, onBackClick}) => {
                 <span>Description: </span>
                 <span>{movieData.description} </span>
             </div>
-            <button onClick={onBackClick}>Back</button>
+            <Button onClick={onBackClick} className='back-button' variant="primary">Back</Button>
         </div>
     )
 }
