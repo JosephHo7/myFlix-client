@@ -29,7 +29,8 @@ useEffect(() => {
             return {
                 _id: doc._id,
                 title: doc.Title,
-                description: doc.Description
+                description: doc.Description,
+                img: doc.ImagePath
             };
         });
         console.log(moviesFromApi);
