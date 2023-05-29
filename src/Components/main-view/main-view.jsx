@@ -6,7 +6,6 @@ import { SignupView } from '../signup-view/signup-view';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { BroweserRouter, Routes, Route, Navigate, BrowserRouter } from "react-router-dom";
-import { NavigationBar } from '../navigation-bar/navigation-bar';
 
 export const MainView = () => {
     const storedUser = JSON.parse(localStorage.getItem("user"));
@@ -40,7 +39,6 @@ useEffect(() => {
 
 return(
     <BrowserRouter>
-        <NavigationBar></NavigationBar>
         <Row className='justify-content-md-center'>
             <Routes>
                 <Route
@@ -104,6 +102,7 @@ return(
                             />
                             </Col>
                             ))} 
+                            <button onClick={() => {setUser(null); setToken(null); localStorage.clear();}}>Logout</button>
                         </>
                        )}
                     </>
